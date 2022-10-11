@@ -87,8 +87,6 @@ class AX25Packet(object):
 
         # TODO: Handle various build conditions
         array += bytearray([self.control, self.protocol_id])
-        #print("packet info field:", self.info)
-        #array += bytearray(self.info, encoding='utf8')
         array += self.info.encode()
 
         return array
