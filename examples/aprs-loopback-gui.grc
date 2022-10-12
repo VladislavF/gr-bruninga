@@ -79,7 +79,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [888, 60.0]
+    coordinate: [1192, 20.0]
     rotation: 0
     state: enabled
 - name: blocks_multiply_const_vxx_0
@@ -111,7 +111,7 @@ blocks:
     bits_per_sample3: FORMAT_VORBIS
     bits_per_sample4: FORMAT_PCM_16
     comment: ''
-    file: /home/vlad/Downloads/bruninga.wav
+    file: ~/bruninga.wav
     format: FORMAT_WAV
     nchan: '1'
     samp_rate: samp_rate
