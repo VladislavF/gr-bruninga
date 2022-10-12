@@ -76,7 +76,7 @@ class ax25_fsk_mod(gr.sync_block):
             return
         
         try:
-            msg = pickle.loads(msg[1])
+            msg = pickle.loads(bytes(msg[1]))
         except Exception as e:
             print('Bad format: Expected pickled AX25Packet')
             print(str(e))

@@ -62,7 +62,7 @@ class str_to_aprs(gr.sync_block):
             print('Expected tuple of (None, str)')
             return
 
-        msg = str(bytearray(msg[1]))[:-1]
+        msg = bytes(msg[1]).decode()[:-1]
 
         p = packet.AX25Packet()
         p.src = self.src
@@ -72,7 +72,7 @@ class str_to_aprs(gr.sync_block):
         p.protocol_id = 0xf0
         p.info = msg
 
-        out = (None, pickle.dumps(p))
+        out = (None, list(pickle.dumps(p)))
         self.message_port_pub(pmt.intern('out'), pmt.to_pmt(out))
 
     def work(self, input_items, output_items):

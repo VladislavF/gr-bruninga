@@ -87,7 +87,7 @@ class AX25Packet(object):
 
         # TODO: Handle various build conditions
         array += bytearray([self.control, self.protocol_id])
-        array += bytearray(self.info)
+        array += self.info.encode()
 
         return array
 
@@ -289,7 +289,7 @@ def from_bytes(array, extended=False):
         offset += 1
 
     # The rest of the buffer is info now.
-    packet.info = array[offset:]
+    packet.info = array[offset:].decode()
 
     return packet
     
