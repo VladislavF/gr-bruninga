@@ -38,13 +38,13 @@ However, you can easily hook a UV-5R (or other radio) to your microphone port,
 and run examples/aprs-wav.grc.
 
 ## TODO
- * Get the demodulator working with the UHD/RTL-SDR
  * Separate the TNC/KISS interface into separate blocks
- * Clean up the initial bandpass filter / resampler
+ * Clean up the initial bandpass filter / resampler?
  * Play with bit twiddling to save packets
  * Do BER testing on the demodulator
  * MOAR DOCUMENTATION
- * Parameterize the FSK Modulator
+ * Add AXPORT input (AX25 to HDLC? Possible modification of string-to-aprs?)
+ * Add option for zeros or mute to FSK modulator
 
 ## Known Issues
  * The ALSA Audio Sink (as of 3.7.5) does not like it when you stop sending it
